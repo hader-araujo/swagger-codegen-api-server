@@ -27,6 +27,11 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
@@ -61,13 +66,12 @@
             <version>${springfox-version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.joschi.jackson</groupId>
-            <artifactId>jackson-datatype-threetenbp</artifactId>
-            <version>2.6.4</version>
-        </dependency>
-
-        <!-- Bean Validation API support -->
+		<dependency>
+			<groupId>org.threeten</groupId>
+			<artifactId>threetenbp</artifactId>
+			<version>1.4.4</version>
+		</dependency>
+		<!-- Bean Validation API support -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -104,7 +108,7 @@
 							<generateModelDocumentation>false</generateModelDocumentation>
 
 							<apiPackage>${default.package}.controller</apiPackage>
-							<generateApis>false</generateApis>
+							<generateApis>true</generateApis>
 							<generateApiTests>false</generateApiTests>
 							<generateApiDocumentation>false</generateApiDocumentation>
 
