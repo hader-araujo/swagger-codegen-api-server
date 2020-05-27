@@ -99,6 +99,7 @@
 							<language>spring</language>
 							<configOptions>
 								<sourceFolder>src/main/java</sourceFolder>
+								<hideGenerationTimestamp>true</hideGenerationTimestamp>
 							</configOptions>
 							<output>${project.basedir}</output>
 
