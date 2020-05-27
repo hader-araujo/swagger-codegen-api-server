@@ -1,4 +1,4 @@
-package br.com.zup.generated.from.swaggercodegen.apiserver.model;
+package br.com.zup.generated.from.swaggercodegen.apiserver.dto;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,12 +12,12 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * Order
+ * OrderDTO
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-25T16:27:56.603-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-26T14:29:33.891-03:00")
 
-public class Order   {
+public class OrderDTO   {
   @JsonProperty("id")
   private Long id = null;
 
@@ -69,7 +69,7 @@ public class Order   {
   @JsonProperty("complete")
   private Boolean complete = null;
 
-  public Order id(Long id) {
+  public OrderDTO id(Long id) {
     this.id = id;
     return this;
   }
@@ -89,7 +89,7 @@ public class Order   {
     this.id = id;
   }
 
-  public Order petId(Long petId) {
+  public OrderDTO petId(Long petId) {
     this.petId = petId;
     return this;
   }
@@ -109,7 +109,7 @@ public class Order   {
     this.petId = petId;
   }
 
-  public Order quantity(Integer quantity) {
+  public OrderDTO quantity(Integer quantity) {
     this.quantity = quantity;
     return this;
   }
@@ -129,7 +129,7 @@ public class Order   {
     this.quantity = quantity;
   }
 
-  public Order shipDate(OffsetDateTime shipDate) {
+  public OrderDTO shipDate(OffsetDateTime shipDate) {
     this.shipDate = shipDate;
     return this;
   }
@@ -150,7 +150,7 @@ public class Order   {
     this.shipDate = shipDate;
   }
 
-  public Order status(StatusEnum status) {
+  public OrderDTO status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -170,7 +170,7 @@ public class Order   {
     this.status = status;
   }
 
-  public Order complete(Boolean complete) {
+  public OrderDTO complete(Boolean complete) {
     this.complete = complete;
     return this;
   }
@@ -199,7 +199,7 @@ public class Order   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Order order = (Order) o;
+    OrderDTO order = (OrderDTO) o;
     return Objects.equals(this.id, order.id) &&
         Objects.equals(this.petId, order.petId) &&
         Objects.equals(this.quantity, order.quantity) &&
@@ -216,7 +216,7 @@ public class Order   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Order {\n");
+    sb.append("class OrderDTO {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    petId: ").append(toIndentedString(petId)).append("\n");

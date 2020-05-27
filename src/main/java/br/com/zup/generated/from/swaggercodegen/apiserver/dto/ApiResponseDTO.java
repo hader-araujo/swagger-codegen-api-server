@@ -1,4 +1,4 @@
-package br.com.zup.generated.from.swaggercodegen.apiserver.model;
+package br.com.zup.generated.from.swaggercodegen.apiserver.dto;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,12 +10,12 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * ModelApiResponse
+ * ApiResponseDTO
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-25T16:27:56.603-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-26T14:29:33.891-03:00")
 
-public class ModelApiResponse   {
+public class ApiResponseDTO   {
   @JsonProperty("code")
   private Integer code = null;
 
@@ -25,7 +25,7 @@ public class ModelApiResponse   {
   @JsonProperty("message")
   private String message = null;
 
-  public ModelApiResponse code(Integer code) {
+  public ApiResponseDTO code(Integer code) {
     this.code = code;
     return this;
   }
@@ -45,7 +45,7 @@ public class ModelApiResponse   {
     this.code = code;
   }
 
-  public ModelApiResponse type(String type) {
+  public ApiResponseDTO type(String type) {
     this.type = type;
     return this;
   }
@@ -65,7 +65,7 @@ public class ModelApiResponse   {
     this.type = type;
   }
 
-  public ModelApiResponse message(String message) {
+  public ApiResponseDTO message(String message) {
     this.message = message;
     return this;
   }
@@ -94,7 +94,7 @@ public class ModelApiResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ModelApiResponse _apiResponse = (ModelApiResponse) o;
+    ApiResponseDTO _apiResponse = (ApiResponseDTO) o;
     return Objects.equals(this.code, _apiResponse.code) &&
         Objects.equals(this.type, _apiResponse.type) &&
         Objects.equals(this.message, _apiResponse.message);
@@ -108,7 +108,7 @@ public class ModelApiResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ModelApiResponse {\n");
+    sb.append("class ApiResponseDTO {\n");
     
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

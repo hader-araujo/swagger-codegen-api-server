@@ -1,4 +1,4 @@
-package br.com.zup.generated.from.swaggercodegen.apiserver.model;
+package br.com.zup.generated.from.swaggercodegen.apiserver.dto;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,19 +10,19 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * Category
+ * TagDTO
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-25T16:27:56.603-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-26T14:29:33.891-03:00")
 
-public class Category   {
+public class TagDTO   {
   @JsonProperty("id")
   private Long id = null;
 
   @JsonProperty("name")
   private String name = null;
 
-  public Category id(Long id) {
+  public TagDTO id(Long id) {
     this.id = id;
     return this;
   }
@@ -42,7 +42,7 @@ public class Category   {
     this.id = id;
   }
 
-  public Category name(String name) {
+  public TagDTO name(String name) {
     this.name = name;
     return this;
   }
@@ -71,9 +71,9 @@ public class Category   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Category category = (Category) o;
-    return Objects.equals(this.id, category.id) &&
-        Objects.equals(this.name, category.name);
+    TagDTO tag = (TagDTO) o;
+    return Objects.equals(this.id, tag.id) &&
+        Objects.equals(this.name, tag.name);
   }
 
   @Override
@@ -84,7 +84,7 @@ public class Category   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Category {\n");
+    sb.append("class TagDTO {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

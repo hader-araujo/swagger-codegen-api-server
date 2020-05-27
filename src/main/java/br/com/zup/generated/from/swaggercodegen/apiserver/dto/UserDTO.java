@@ -1,4 +1,4 @@
-package br.com.zup.generated.from.swaggercodegen.apiserver.model;
+package br.com.zup.generated.from.swaggercodegen.apiserver.dto;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,12 +10,12 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * User
+ * UserDTO
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-25T16:27:56.603-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-26T14:29:33.891-03:00")
 
-public class User   {
+public class UserDTO   {
   @JsonProperty("id")
   private Long id = null;
 
@@ -40,7 +40,7 @@ public class User   {
   @JsonProperty("userStatus")
   private Integer userStatus = null;
 
-  public User id(Long id) {
+  public UserDTO id(Long id) {
     this.id = id;
     return this;
   }
@@ -60,7 +60,7 @@ public class User   {
     this.id = id;
   }
 
-  public User username(String username) {
+  public UserDTO username(String username) {
     this.username = username;
     return this;
   }
@@ -80,7 +80,7 @@ public class User   {
     this.username = username;
   }
 
-  public User firstName(String firstName) {
+  public UserDTO firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
@@ -100,7 +100,7 @@ public class User   {
     this.firstName = firstName;
   }
 
-  public User lastName(String lastName) {
+  public UserDTO lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
@@ -120,7 +120,7 @@ public class User   {
     this.lastName = lastName;
   }
 
-  public User email(String email) {
+  public UserDTO email(String email) {
     this.email = email;
     return this;
   }
@@ -140,7 +140,7 @@ public class User   {
     this.email = email;
   }
 
-  public User password(String password) {
+  public UserDTO password(String password) {
     this.password = password;
     return this;
   }
@@ -160,7 +160,7 @@ public class User   {
     this.password = password;
   }
 
-  public User phone(String phone) {
+  public UserDTO phone(String phone) {
     this.phone = phone;
     return this;
   }
@@ -180,7 +180,7 @@ public class User   {
     this.phone = phone;
   }
 
-  public User userStatus(Integer userStatus) {
+  public UserDTO userStatus(Integer userStatus) {
     this.userStatus = userStatus;
     return this;
   }
@@ -209,7 +209,7 @@ public class User   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    User user = (User) o;
+    UserDTO user = (UserDTO) o;
     return Objects.equals(this.id, user.id) &&
         Objects.equals(this.username, user.username) &&
         Objects.equals(this.firstName, user.firstName) &&
@@ -228,7 +228,7 @@ public class User   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class User {\n");
+    sb.append("class UserDTO {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");

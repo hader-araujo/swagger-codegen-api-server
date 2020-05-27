@@ -6,7 +6,7 @@
 package br.com.zup.generated.from.swaggercodegen.apiserver.controller;
 
 import java.util.Map;
-import br.com.zup.generated.from.swaggercodegen.apiserver.model.Order;
+import br.com.zup.generated.from.swaggercodegen.apiserver.dto.OrderDTO;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -22,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-25T16:27:56.603-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-26T14:29:33.891-03:00")
 
 @Api(value = "store", description = "the store API")
 public interface StoreApi {
@@ -48,25 +48,25 @@ public interface StoreApi {
     ResponseEntity<Map<String, Integer>> getInventory();
 
 
-    @ApiOperation(value = "Find purchase order by ID", nickname = "getOrderById", notes = "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions", response = Order.class, tags={ "store", })
+    @ApiOperation(value = "Find purchase order by ID", nickname = "getOrderById", notes = "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions", response = OrderDTO.class, tags={ "store", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Order.class),
+        @ApiResponse(code = 200, message = "successful operation", response = OrderDTO.class),
         @ApiResponse(code = 400, message = "Invalid ID supplied"),
         @ApiResponse(code = 404, message = "Order not found") })
     @RequestMapping(value = "/store/order/{orderId}",
         produces = { "application/json", "application/xml" }, 
         method = RequestMethod.GET)
-    ResponseEntity<Order> getOrderById(@Min(1) @Max(10) @ApiParam(value = "ID of pet that needs to be fetched",required=true) @PathVariable("orderId") Long orderId);
+    ResponseEntity<OrderDTO> getOrderById(@Min(1) @Max(10) @ApiParam(value = "ID of pet that needs to be fetched",required=true) @PathVariable("orderId") Long orderId);
 
 
-    @ApiOperation(value = "Place an order for a pet", nickname = "placeOrder", notes = "", response = Order.class, tags={ "store", })
+    @ApiOperation(value = "Place an order for a pet", nickname = "placeOrder", notes = "", response = OrderDTO.class, tags={ "store", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Order.class),
+        @ApiResponse(code = 200, message = "successful operation", response = OrderDTO.class),
         @ApiResponse(code = 400, message = "Invalid Order") })
     @RequestMapping(value = "/store/order",
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json" },
         method = RequestMethod.POST)
-    ResponseEntity<Order> placeOrder(@ApiParam(value = "order placed for purchasing the pet" ,required=true )  @Valid @RequestBody Order body);
+    ResponseEntity<OrderDTO> placeOrder(@ApiParam(value = "order placed for purchasing the pet" ,required=true )  @Valid @RequestBody OrderDTO body);
 
 }

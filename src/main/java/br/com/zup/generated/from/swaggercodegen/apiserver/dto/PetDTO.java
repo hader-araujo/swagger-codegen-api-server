@@ -1,8 +1,8 @@
-package br.com.zup.generated.from.swaggercodegen.apiserver.model;
+package br.com.zup.generated.from.swaggercodegen.apiserver.dto;
 
 import java.util.Objects;
-import br.com.zup.generated.from.swaggercodegen.apiserver.model.Category;
-import br.com.zup.generated.from.swaggercodegen.apiserver.model.Tag;
+import br.com.zup.generated.from.swaggercodegen.apiserver.dto.CategoryDTO;
+import br.com.zup.generated.from.swaggercodegen.apiserver.dto.TagDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -15,17 +15,17 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * Pet
+ * PetDTO
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-25T16:27:56.603-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-05-26T14:29:33.891-03:00")
 
-public class Pet   {
+public class PetDTO   {
   @JsonProperty("id")
   private Long id = null;
 
   @JsonProperty("category")
-  private Category category = null;
+  private CategoryDTO category = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -36,7 +36,7 @@ public class Pet   {
 
   @JsonProperty("tags")
   @Valid
-  private List<Tag> tags = null;
+  private List<TagDTO> tags = null;
 
   /**
    * pet status in the store
@@ -74,7 +74,7 @@ public class Pet   {
   @JsonProperty("status")
   private StatusEnum status = null;
 
-  public Pet id(Long id) {
+  public PetDTO id(Long id) {
     this.id = id;
     return this;
   }
@@ -94,7 +94,7 @@ public class Pet   {
     this.id = id;
   }
 
-  public Pet category(Category category) {
+  public PetDTO category(CategoryDTO category) {
     this.category = category;
     return this;
   }
@@ -107,15 +107,15 @@ public class Pet   {
 
   @Valid
 
-  public Category getCategory() {
+  public CategoryDTO getCategory() {
     return category;
   }
 
-  public void setCategory(Category category) {
+  public void setCategory(CategoryDTO category) {
     this.category = category;
   }
 
-  public Pet name(String name) {
+  public PetDTO name(String name) {
     this.name = name;
     return this;
   }
@@ -136,12 +136,12 @@ public class Pet   {
     this.name = name;
   }
 
-  public Pet photoUrls(List<String> photoUrls) {
+  public PetDTO photoUrls(List<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
 
-  public Pet addPhotoUrlsItem(String photoUrlsItem) {
+  public PetDTO addPhotoUrlsItem(String photoUrlsItem) {
     this.photoUrls.add(photoUrlsItem);
     return this;
   }
@@ -162,14 +162,14 @@ public class Pet   {
     this.photoUrls = photoUrls;
   }
 
-  public Pet tags(List<Tag> tags) {
+  public PetDTO tags(List<TagDTO> tags) {
     this.tags = tags;
     return this;
   }
 
-  public Pet addTagsItem(Tag tagsItem) {
+  public PetDTO addTagsItem(TagDTO tagsItem) {
     if (this.tags == null) {
-      this.tags = new ArrayList<Tag>();
+      this.tags = new ArrayList<TagDTO>();
     }
     this.tags.add(tagsItem);
     return this;
@@ -183,15 +183,15 @@ public class Pet   {
 
   @Valid
 
-  public List<Tag> getTags() {
+  public List<TagDTO> getTags() {
     return tags;
   }
 
-  public void setTags(List<Tag> tags) {
+  public void setTags(List<TagDTO> tags) {
     this.tags = tags;
   }
 
-  public Pet status(StatusEnum status) {
+  public PetDTO status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -220,7 +220,7 @@ public class Pet   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Pet pet = (Pet) o;
+    PetDTO pet = (PetDTO) o;
     return Objects.equals(this.id, pet.id) &&
         Objects.equals(this.category, pet.category) &&
         Objects.equals(this.name, pet.name) &&
@@ -237,7 +237,7 @@ public class Pet   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Pet {\n");
+    sb.append("class PetDTO {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
