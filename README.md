@@ -1,6 +1,12 @@
 # Generating API Server using swagger-codegen-maven-plugin
 
-## This repository contains an example of using swagger-codegen-maven-plugin
+This repository contains an example of using swagger-codegen-maven-plugin
+
+Overview
+============================
+In this example, the models and the interface of the controllers are being generated, so it is necessary to create the controllers implementations.
+The controller's interfaces have the [Swagger documentation](https://swagger.io/docs).
+
 
 ### API Source
 This is an example of generating an API server of an OpenAPI contract.
