@@ -4,9 +4,34 @@ This repository contains an example of using swagger-codegen-maven-plugin
 
 Overview
 ============================
-In this example, the models and the interface of the controllers are being generated, so it is necessary to create the controllers implementations.
+In this example, the models and the interface of the controllers are being generated, so it is necessary to create the controller's implementations.
 The controller's interfaces have the [Swagger documentation](https://swagger.io/docs).
 
+Usage
+============================
+
+Add to your `build->plugins` section (default phase is `generate-sources` phase)
+```xml
+<plugin>
+    <groupId>io.swagger</groupId>
+    <artifactId>swagger-codegen-maven-plugin</artifactId>
+    <version>2.3.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>generate</goal>
+            </goals>
+            <configuration>
+                <inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
+                <language>spring</language>
+                <configOptions>
+                   <sourceFolder>src/main/java</sourceFolder>
+                </configOptions>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
 
 ### API Source
 This is an example of generating an API server of an OpenAPI contract.
