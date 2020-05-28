@@ -40,6 +40,10 @@ In this case, the [Swagger Petstore](http://petstore.swagger.io/v2/swagger.json)
 ### Tool to generate the API
 The Maven plugin called [swagger-codegen-maven-plugin](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin) is being used.
 
+### Ignore files to be generated
+If you need to ignore files that need to not be generated/updated, you can:
+ - Use the configuration parameter `<ignoreFileOverride>FILE PATH HERE</ignoreFileOverride>` or 
+ - Add they on the `.swagger-codegen-ignore` file on the root of the project.
 
 ### How to run
 After cloning the project, the models and controllers can be generated using this command:
