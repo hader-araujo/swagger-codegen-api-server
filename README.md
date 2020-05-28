@@ -22,7 +22,7 @@ Add to your `build->plugins` section (default phase is `generate-sources` phase)
                 <goal>generate</goal>
             </goals>
             <configuration>
-                <inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
+                <inputSpec>http://petstore.swagger.io/v2/swagger.json</inputSpec>
                 <language>spring</language>
                 <configOptions>
                    <sourceFolder>src/main/java</sourceFolder>
