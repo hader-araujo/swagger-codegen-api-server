@@ -100,6 +100,7 @@
 							<configOptions>
 								<sourceFolder>src/main/java</sourceFolder>
 								<hideGenerationTimestamp>true</hideGenerationTimestamp>
+								<serializableModel>true</serializableModel>
 							</configOptions>
 							<output>${project.basedir}</output>
 
