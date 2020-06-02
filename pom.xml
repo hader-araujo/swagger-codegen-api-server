@@ -101,6 +101,7 @@
 								<sourceFolder>src/main/java</sourceFolder>
 								<hideGenerationTimestamp>true</hideGenerationTimestamp>
 								<serializableModel>true</serializableModel>
+								<dateLibrary>java8</dateLibrary>
 							</configOptions>
 							<output>${project.basedir}</output>
 
