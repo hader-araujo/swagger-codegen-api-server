@@ -11,49 +11,30 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * CategoryDTO
+ * Body1DTO
  */
 @Validated
 
 
-public class CategoryDTO  implements Serializable  {
+public class Body1DTO  implements Serializable  {
   private static final long serialVersionUID = 1L;
-
-  @JsonProperty("id")
-  private Long id = null;
 
   @JsonProperty("name")
   private String name = null;
 
-  public CategoryDTO id(Long id) {
-    this.id = id;
-    return this;
-  }
+  @JsonProperty("status")
+  private String status = null;
 
-  /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  
-    public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public CategoryDTO name(String name) {
+  public Body1DTO name(String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Get name
+   * Updated name of the pet
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Updated name of the pet")
   
     public String getName() {
     return name;
@@ -61,6 +42,25 @@ public class CategoryDTO  implements Serializable  {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Body1DTO status(String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Updated status of the pet
+   * @return status
+  **/
+  @ApiModelProperty(value = "Updated status of the pet")
+  
+    public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 
 
@@ -72,23 +72,23 @@ public class CategoryDTO  implements Serializable  {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CategoryDTO category = (CategoryDTO) o;
-    return Objects.equals(this.id, category.id) &&
-        Objects.equals(this.name, category.name);
+    Body1DTO body1 = (Body1DTO) o;
+    return Objects.equals(this.name, body1.name) &&
+        Objects.equals(this.status, body1.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name);
+    return Objects.hash(name, status);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CategoryDTO {\n");
+    sb.append("class Body1DTO {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

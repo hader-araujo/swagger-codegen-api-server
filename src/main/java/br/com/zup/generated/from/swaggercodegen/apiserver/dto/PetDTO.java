@@ -20,7 +20,8 @@ import javax.validation.constraints.*;
  */
 @Validated
 
-public class PetDTO  implements Serializable {
+
+public class PetDTO  implements Serializable  {
   private static final long serialVersionUID = 1L;
 
   @JsonProperty("id")
@@ -72,7 +73,6 @@ public class PetDTO  implements Serializable {
       return null;
     }
   }
-
   @JsonProperty("status")
   private StatusEnum status = null;
 
@@ -86,9 +86,8 @@ public class PetDTO  implements Serializable {
    * @return id
   **/
   @ApiModelProperty(value = "")
-
-
-  public Long getId() {
+  
+    public Long getId() {
     return id;
   }
 
@@ -106,10 +105,9 @@ public class PetDTO  implements Serializable {
    * @return category
   **/
   @ApiModelProperty(value = "")
-
-  @Valid
-
-  public CategoryDTO getCategory() {
+  
+    @Valid
+    public CategoryDTO getCategory() {
     return category;
   }
 
@@ -127,10 +125,9 @@ public class PetDTO  implements Serializable {
    * @return name
   **/
   @ApiModelProperty(example = "doggie", required = true, value = "")
-  @NotNull
+      @NotNull
 
-
-  public String getName() {
+    public String getName() {
     return name;
   }
 
@@ -153,10 +150,9 @@ public class PetDTO  implements Serializable {
    * @return photoUrls
   **/
   @ApiModelProperty(required = true, value = "")
-  @NotNull
+      @NotNull
 
-
-  public List<String> getPhotoUrls() {
+    public List<String> getPhotoUrls() {
     return photoUrls;
   }
 
@@ -182,10 +178,8 @@ public class PetDTO  implements Serializable {
    * @return tags
   **/
   @ApiModelProperty(value = "")
-
-  @Valid
-
-  public List<TagDTO> getTags() {
+      @Valid
+    public List<TagDTO> getTags() {
     return tags;
   }
 
@@ -203,9 +197,8 @@ public class PetDTO  implements Serializable {
    * @return status
   **/
   @ApiModelProperty(value = "pet status in the store")
-
-
-  public StatusEnum getStatus() {
+  
+    public StatusEnum getStatus() {
     return status;
   }
 
@@ -262,4 +255,3 @@ public class PetDTO  implements Serializable {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

@@ -15,31 +15,14 @@
 
 	<properties>
 		<java.version>11</java.version>
-        <springfox-version>2.7.0</springfox-version>
+		<springfox-version>2.9.2</springfox-version>
 		<default.package>br.com.zup.generated.from.swaggercodegen.apiserver</default.package>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -66,11 +49,6 @@
             <version>${springfox-version}</version>
         </dependency>
 
-		<dependency>
-			<groupId>org.threeten</groupId>
-			<artifactId>threetenbp</artifactId>
-			<version>1.4.4</version>
-		</dependency>
 		<!-- Bean Validation API support -->
         <dependency>
             <groupId>javax.validation</groupId>
@@ -86,9 +64,9 @@
 			</plugin>
 
 			<plugin>
-				<groupId>io.swagger</groupId>
-				<artifactId>swagger-codegen-maven-plugin</artifactId>
-				<version>2.3.1</version>
+				<groupId>br.zup.codegen.v3</groupId>
+				<artifactId>swagger-codegen-zup-plugin</artifactId>
+				<version>3.0.20</version>
 				<executions>
 					<execution>
 						<goals>
@@ -98,11 +76,25 @@
 							<inputSpec>http://petstore.swagger.io/v2/swagger.json</inputSpec>
 							<language>spring</language>
 							<configOptions>
+								<java8>true</java8>
 								<sourceFolder>src/main/java</sourceFolder>
 								<hideGenerationTimestamp>true</hideGenerationTimestamp>
 								<serializableModel>true</serializableModel>
+								<defaultInterfaces>false</defaultInterfaces>
 								<dateLibrary>java8</dateLibrary>
+								<delegatePattern>false</delegatePattern>
+								<useOptional>true</useOptional>
 							</configOptions>
+
+							<additionalProperties>
+								<additionalProperty>isOpenFeign=true</additionalProperty>
+								<additionalProperty>notUsingHelperMethods=true</additionalProperty>
+							</additionalProperties>
+
+							<templateReplacingList>
+								<api.mustache>${project.basedir}/src/main/resources/JavaSpring/api.mustache</api.mustache>
+							</templateReplacingList>
+
 							<output>${project.basedir}</output>
 
 							<modelPackage>${default.package}.dto</modelPackage>
